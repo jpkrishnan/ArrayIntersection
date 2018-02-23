@@ -22,7 +22,7 @@ public class Intersection {
 		
 		int length = (bFirstArrayIsShorter) ? A.length : B.length; //compute the length of the shorter length
 		
-		for (int i=0; i<length; i++) { //Put the shorter length elements in the Set. Eliminate any duplicates.
+		for (int i=0; i<length; i++) { //Put the elements from the shorter array in the Set. Eliminate any duplicates.
 			if(bFirstArrayIsShorter) {
 				if(!set.contains(A[i])) {
 					set.add(A[i]);
@@ -49,9 +49,9 @@ public class Intersection {
 		}
 		/*
 		 * NOTE: This program will print all intersecting elements from the longer array. 
-		 * If there are duplicates which are intersecting it will print them twice.
-		 * To eliminate duplicates we need to use another Set with just 
-		 * intersecting elements and then only add into it if an element already does not exist in the set
+		 * If there are duplicates which are intersecting it will print them more than once.
+		 * To eliminate printing duplicates we need to use another Set with just 
+		 * non duplicate intersecting elements added into it 
 		 */		
 	}
 	
